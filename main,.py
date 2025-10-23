@@ -1,6 +1,6 @@
 from iu.menu_principal import menu_principal
 from negocio.negocio_comunas import obtener_listado_comunas, obtener_comuna_inidividual
-from negocio.negocio_marcas import obtener_listado_marcas, obtener_marca_inidividual, agregar_marca
+from negocio.negocio_marcas import obtener_listado_marcas, obtener_marca_por_nombre, agregar_marca
 from modelos.combustible import Combustible
 from modelos.comuna import Comuna
 

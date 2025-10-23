@@ -2,12 +2,19 @@ from datos.conexion import Session
 from sqlalchemy import func
 from modelos.comuna import Comuna
 from modelos.combustible import Combustible
+from modelos.marca import Marca
 
 sesion = Session()
 
 
 def obtener_listado_objetos(object):
     listado_objetos = sesion.query(object).all()
+    if len(listado_objetos) > 0:
+        return listado_objetos
+
+
+def obtener_listado_marcas_pais(pais):
+    listado_objetos = sesion.query(Marca).filter_by(pais_origen=pais).all()
     if len(listado_objetos) > 0:
         return listado_objetos
 

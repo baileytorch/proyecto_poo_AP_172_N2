@@ -1,0 +1,1 @@
+INSERT INTO marcas (id_pais) SELECT P.id FROM paises P JOIN marcas M ON P.nombre_pais=M.pais_origen WHERE M.pais_origen = P.nombre_pais;
